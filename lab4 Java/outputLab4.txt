@@ -1,0 +1,163 @@
+Test costructor1--invalid inputs: (-1,2)
+0  0  
+0  0  
+0  0  
+
+
+Test costructor1--invalid inputs: (1,0)
+0  0  0  
+
+
+Test costructor1--valid inputs: (3,4)
+0  0  0  0  
+0  0  0  0  
+0  0  0  0  
+
+
+Test costructor2-- 4-by-5 array
+1  1  1  1  1  
+2  2  2  8  2  
+0  0  1  7  1  
+0  0  0  1  1  
+
+
+Test getElement(1,3), Note that Indices begin with 0
+8
+Test getElement(10,2), invalid indexes
+java.lang.IndexOutOfBoundsException: Invalid indexes.
+
+Test setElement(-99,1,3), Note that Indices begin with 0
+true
+Test getElement(1,3), Note that Indices begin with 0
+-99
+
+Test subMatrix(), valid inputs: (2,3)
+1  1  1  1  
+2  2  2  -99  
+0  0  1  7  
+
+
+Test subMatrix(), invalid inputs: (3,6)
+java.lang.ArithmeticException: Submatrix not defined
+
+Test isUpperTr(), return true
+1  2  3  4  
+0  5  6  7  
+0  0  8  0  
+
+true
+
+Test isUpperTr(), return false
+2  0  0  0  
+0  9  6  8  
+5  0  4  4  
+0  0  0  9  
+
+false
+
+2  0  0  0  4  
+0  2  1  1  4  
+0  0  2  1  4  
+0  0  0  2  6  
+
+Test addTo() -- invalid operation
+java.lang.ArithmeticException: Invalid operation
+
+Test addTo() -- valid operation
+3  4  5  
+2  4  6  
+0  0  0  
+2  4  2  
+
+Test sum() -- invalid operation
+java.lang.ArithmeticException: The sum is not defined.
+
+Test sum() -- valid operation
+3  -2  5  
+2  1  -2  
+
+Test costructor1--invalid input
+0  
+
+Test costructor1--valid input
+0  0  0  0  
+0  0  0  0  
+0  0  0  0  
+0  0  0  0  
+
+0  0  0  0  0  0  0  0  0  0  
+
+
+
+Test costructor2
+1  1  1  1  1  
+0  2  2  2  2  
+0  0  3  3  3  
+0  0  0  4  4  
+0  0  0  0  5  
+
+1  1  1  1  1  2  2  2  2  3  3  3  4  4  5  
+
+
+Test costructor2
+java.lang.IllegalArgumentException: Not An Upper Triangular Matrix.
+
+
+
+Test getDim()
+5
+6
+
+Test getElement() - valid positions
+1  1  1  1  1  
+0  2  2  2  2  
+0  0  3  3  3  
+0  0  0  4  4  
+0  0  0  0  5  
+
+Test getElement() - invalid position 
+java.lang.IndexOutOfBoundsException: Invalid indexes
+
+Test setElement() - valid positions
+1  1  1  1  1  
+0  2  2  7  2  
+0  0  3  3  3  
+0  0  0  4  4  
+0  0  0  0  5  
+
+1  2  3  4  5  6  
+0  7  8  9  9  9  
+0  0  3  3  3  3  
+0  0  0  4  4  4  
+0  0  0  0  9  5  
+0  0  0  0  0  7  
+Test setElement() - invalid position 
+java.lang.IndexOutOfBoundsException: Invalid indexes
+
+Test setElement() - attempt to put a non-zero value in the lower part 
+java.lang.IllegalArgumentException: Incorrect arguments
+Pay attention! This is an upper triangular matrix!
+
+Test fullMatrix()
+1  1  1  1  1  
+0  2  2  2  2  
+0  0  3  3  3  
+0  0  0  4  4  
+0  0  0  0  5  
+
+9  9  9  
+0  8  8  
+0  0  7  
+
+Test m4.getDet() -- valid operation
+504
+
+Test effSolve() -- invalid operation
+java.lang.IllegalArgumentException: Invalid dimension of b.
+
+Test effSolve() -- valid operation
+[-0.15277777777777776, -0.1964285714285714, 0.5714285714285714]
+
+Test effSolve() -- invalid operation
+java.lang.IllegalArgumentException: The determinant of A is zero.
+
